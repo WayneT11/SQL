@@ -1,0 +1,25 @@
+/* What does the app's SQL look like? */
+CREATE TABLE SWGOH_user_info (id INTEGER PRIMARY KEY, fullname TEXT, username TEXT, age INTEGER, country TEXT);
+
+INSERT INTO SWGOH_user_info VALUES (1, "Way Tee", "Big Peppa", 23, "South Korea");
+INSERT INTO SWGOH_user_info VALUES (2, "Lau Luc-Lo", "Lil Peppa", 24, "Guatemala");
+INSERT INTO SWGOH_user_info VALUES (3, "Barack Obama", "Rackabam", 48, "USA");
+INSERT INTO SWGOH_user_info VALUES (4, "Connor McGreggor", "Lit'l Weasel", 32, "Ireland");
+
+SELECT * FROM SWGOH_user_info;
+
+
+/* Change Barack Obama's age from 48 to 49 */
+UPDATE SWGOH_user_info SET age = 49 WHERE id = 3;
+
+
+/* Show updated table after changing Barack Obama's age */
+SELECT * FROM SWGOH_user_info;
+
+
+/* Delete Barack Obama's row with all the information about him from the table */
+DELETE FROM SWGOH_user_info WHERE id = 3;
+
+
+/* Show updated table after deleting Barack Obama's info */
+SELECT * FROM SWGOH_user_info;
