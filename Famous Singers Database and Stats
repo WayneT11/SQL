@@ -1,0 +1,48 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE singers (id INTEGER PRIMARY KEY, name TEXT, age INTEGER);
+
+INSERT INTO singers VALUES (1, "NF", 26);
+INSERT INTO singers VALUES (2, "Eminem", 48);
+INSERT INTO singers VALUES (3, "Kanye West", 32);
+INSERT INTO singers VALUES (4, "Lil Wayne", 52);
+INSERT INTO singers VALUES (5, "Juice WRLD", 21);
+INSERT INTO singers VALUES (6, "Machine Gun Kelly", 27);
+
+
+CREATE TABLE songs (id INTEGER PRIMARY KEY, name TEXT, singer_id INTEGER, released INTEGER);
+INSERT INTO songs VALUES (1, "NO NAME", 1, 2018);
+INSERT INTO songs VALUES (2, "Lucid Dreams", 5, 2012);
+INSERT INTO songs VALUES (3, "el Diablo", 6, 2019);
+INSERT INTO songs VALUES (4, "Wonder", 3, 2011);
+INSERT INTO songs VALUES (5, "Lose Yourself", 2, 2002);
+INSERT INTO songs VALUES (6, "A Milli", 4, 2004);
+INSERT INTO songs VALUES (7, "Lean Wit Me", 5, 2016);
+INSERT INTO songs VALUES (8, "roll the windows up", 6, 2019);
+INSERT INTO songs VALUES (9, "Cinderella Man", 2, 2003);
+INSERT INTO songs VALUES (10, "Can't Say Nothin'", 3, 2010);
+
+
+CREATE TABLE singer_friends (id INTEGER PRIMARY KEY, singer_id INTEGER, friend_name TEXT);
+INSERT INTO singer_friends VALUES (1, 1, "Juice WRLD");
+INSERT INTO singer_friends VALUES (2, 2, "Lil Wayne");
+INSERT INTO singer_friends VALUES (3, 3, "Eminem");
+INSERT INTO singer_friends VALUES (4, 5, "Machine Gun Kelly");
+INSERT INTO singer_friends VALUES (5, 1, "Kanye West");
+INSERT INTO singer_friends VALUES (6, 4, "Kanye West");
+
+
+/* Combine the singers with their corresponding songs and then order them by release date from newest to oldest */
+SELECT singers.name, songs.name, songs.released
+    FROM singers
+    JOIN songs
+    ON singers.id = songs.singer_id
+        ORDER BY released DESC;
+
+
+/* Combine the singers with their corresponding friends */
+SELECT singers.name, singer_friends.friend_name
+    FROM singers
+    JOIN singer_friends
+    ON singers.id = singer_friends.singer_id;
+    
