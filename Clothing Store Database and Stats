@@ -1,0 +1,37 @@
+CREATE TABLE gymshark_clothing (id INTEGER PRIMARY KEY, name TEXT, color TEXT, quantity INTEGER, price REAL, weight REAL);
+
+INSERT INTO gymshark_clothing VALUES (1, "Apex T-Shirt", "Bold Blue", 10, 34.99, 0.35);
+INSERT INTO gymshark_clothing VALUES (2, "Apex T-Shirt", "Crimson Red", 7, 39.99, 0.30);
+INSERT INTO gymshark_clothing VALUES (3, "Apex T-Shirt", "Midnight Black", 20, 44.99, 0.40);
+INSERT INTO gymshark_clothing VALUES (4, "Apex T-Shirt", "Ice White", 18, 42.99, 0.30);
+INSERT INTO gymshark_clothing VALUES (5, "Apex Shorts", "Bold Blue", 8, 29.99, 1.00);
+INSERT INTO gymshark_clothing VALUES (6, "Apex Shorts", "Crimson Red", 6, 34.99, 1.20);
+INSERT INTO gymshark_clothing VALUES (7, "Apex Shorts", "Midnight Black", 14, 39.99, 1.40);
+INSERT INTO gymshark_clothing VALUES (8, "Apex Shorts", "Ice White", 13, 39.99, 1.25);
+INSERT INTO gymshark_clothing VALUES (9, "Laura's City Girl T-Shirt", "Sky Blue", 50, 39.99, 0.50);
+INSERT INTO gymshark_clothing VALUES (10, "Laura's City Girl T-Shirt", "Maroon Red", 45, 35.99, 0.55);
+INSERT INTO gymshark_clothing VALUES (11, "Laura's Long Sleeve Shirt", "Sky Blue", 60, 49.99, 75);
+INSERT INTO gymshark_clothing VALUES (12, "Laura's Long Sleeve Shirt", "Maroon Red", 55, 44.99, 0.60);
+INSERT INTO gymshark_clothing VALUES (13, "Laura's Shorts", "Sky Blue", 69, 69.69, 0.69);
+INSERT INTO gymshark_clothing VALUES (14, "Laura's Shorts", "Maroon Red", 60, 39.99, 0.75);
+INSERT INTO gymshark_clothing VALUES (15, "Laura's Shorts", "Midnight Black", 80, 49.99, 0.75);
+
+
+/* Display table including every row and every column of information  */
+SELECT * FROM gymshark_clothing;
+
+
+/* Display clothing items in order from least expensive to most expensive */
+SELECT * FROM gymshark_clothing ORDER BY price ASC;
+
+
+/* Display quantity of products in order from least to greatest */
+SELECT * FROM gymshark_clothing ORDER BY quantity ASC;
+
+
+/* Display total stock of every item the store currently has  */
+SELECT SUM(quantity) AS "Total Stock" FROM gymshark_clothing;
+
+
+/* Display total stock of clothing for each color */
+SELECT color, SUM(quantity) AS "Total Stock" FROM gymshark_clothing GROUP BY color;
