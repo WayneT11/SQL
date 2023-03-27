@@ -41,3 +41,19 @@ AVG(danceability),
 AVG(energy)
 FROM BIT_DB.Spotifydata;
 
+-- #8.  What is the average danceability of the top 10 most popular songs?
+WITH top_10_songs AS (
+SELECT s.track_name,
+s.popularity,
+danceability
+FROM SpotifyData s 
+ORDER BY s.popularity DESC
+LIMIT 10
+)
+ 
+SELECT AVG(danceability) AS 'Avg Danceability of Top 10 Songs'
+FROM top_10_songs;
+-- Note: to find the correct information to this question, I used a CTE or Common Table Expression.
+-- In the inner portion of the query, I told the CTE to only select the first 10 songs with the highest popularity values.
+-- Then, in the outer query, I told the CTE to calculate the average danceability of the songs it selected from the inner query.
+
