@@ -1,0 +1,43 @@
+-- For this project, I downloaded Spotify data from Kaggle.
+-- Then, I inserted the Spotify Data .csv into the table.
+-- Finally, I explored the data using the following SQL.
+
+-- #1. What is the average danceability by artist and track?
+SELECT AVG(danceability)
+FROM BIT_DB.Spotifydata;
+
+-- #2. Who are the Top 10 Artists based on popularity?
+SELECT artist_name, popularity
+FROM BIT_DB.Spotifydata
+ORDER BY popularity DESC
+LIMIT 10;
+
+-- #3. What artist released the longest song?
+SELECT artist_name, duration_ms
+FROM BIT_DB.Spotifydata
+ORDER BY duration_ms DESC
+LIMIT 1;
+
+-- #4. What artist released the shortest song?
+SELECT artist_name, duration_ms
+FROM BIT_DB.Spotifydata
+ORDER BY duration_ms ASC
+LIMIT 1;
+
+--  #5. What is the average duration of all the songs?
+SELECT AVG(duration_ms)
+FROM BIT_DB.Spotifydata;
+
+-- #6. What's the average danceability for the 10 most popular songs?
+SELECT AVG(danceability)
+FROM BIT_DB.Spotifydata
+WHERE popularity >= 92
+LIMIT 10;
+
+-- #7. What is the average popularity, danceability and energy?
+SELECT
+AVG(popularity),
+AVG(danceability),
+AVG(energy)
+FROM BIT_DB.Spotifydata;
+
