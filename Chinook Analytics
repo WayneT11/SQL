@@ -218,3 +218,4 @@ FROM TotalAgentSales;
 -- Note: This answer was fairly easy to find since I already had most of the code written from the previous answer.
 -- I simply added the WHERE clause at the end of the inner query, telling it to only select information where the InvoiceDate begins with 2009,
 -- and renamed the total sales column to 'Total Agent Sales 2009'.
+
