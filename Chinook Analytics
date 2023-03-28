@@ -1,4 +1,6 @@
--- In this SQL code, I first explored the data, noting all tables with messy data. Then, I answered some questions about the data, and left notes where the answer was either challenging or required me to learn something new (yes some did require me to learn something new but were not as challenging as others!).
+-- In this SQL code, I first explored the data, noting all tables with messy data.
+-- Then, I answered some questions about the data, and left notes where the answer was either challenging or required me to learn something new
+-- (yes some did require me to learn something new but were not as challenging as others!).
 
 SELECT * FROM albums;
 SELECT * FROM artists;
@@ -45,7 +47,8 @@ Country
 FROM customers
 WHERE Country = 'Brazil';
 
--- 3. Find the Invoices of customers who are from Brazil. The resulting table should show the customer's full name, Invoice ID, Date of the invoice, and billing country.
+-- 3. Find the Invoices of customers who are from Brazil.
+-- The resulting table should show the customer's full name, Invoice ID, Date of the invoice, and billing country.
 -- join on customerId's
 SELECT 
 customers.FirstName, 
@@ -91,7 +94,8 @@ FROM invoices
         ON customers.SupportRepId = employees.EmployeeId
 WHERE BillingState IS NOT NULL;
 -- Note: for this query, I did have to look up how to join multiple tables as this was the first time I had ever attempted to do so.
--- I went on SQL Shack and read what they had on JOIN functions and concluded that the best function to use for this query was an INNER JOIN since it would only return the rows that match in each table.
+-- I went on SQL Shack and read what they had on JOIN functions
+-- and concluded that the best function to use for this query was an INNER JOIN since it would only return the rows that match in each table.
 
 -- #7. Show the Invoice Total, Customer name, Country, and Sales Agent name for all invoices and customers.
 SELECT 
@@ -186,7 +190,8 @@ FROM TotalAgentSales;
 -- I was not sure where I went wrong for there to be duplicates of the same names (and still not sure),
 -- but I figured if I just turned that query into the inner query portion of a CTE, and then ran an outer query using the same OVER - PARTITION BY window function,
 -- then the results would be further filtered down into what I was looking for.
--- For clarity, below is the code I began with, but did not produce the results I was looking for, as it contained many duplicates of the same names, with no real total of any one name.
+-- For clarity, below is the code I began with, but did not produce the results I was looking for,
+-- as it contained many duplicates of the same names, with no real total of any one name.
 SELECT DISTINCT 
 employees.FirstName, 
 employees.LastName, 
