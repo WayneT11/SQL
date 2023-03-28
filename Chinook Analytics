@@ -113,7 +113,7 @@ WHERE InvoiceDate LIKE '2009%';
 -- or
 SELECT COUNT(InvoiceDate) AS 'Invoices From 2009' FROM invoices
 WHERE InvoiceDate < '2010-01-01 00:00:00';
--- Here, I learned something new! I didn't think the 'less than' function would work since 'InvoiceDate' is not assigned as an Integer! But it worked!
+-- Note: Here, I learned something new! I didn't think the 'less than' function would work since 'InvoiceDate' is not assigned as an Integer! But it worked!
 
 -- #9. What are the total sales for 2009?
 SELECT SUM(Total) AS 'Total Sales for 2009' FROM invoices
@@ -196,3 +196,26 @@ FROM invoices
         ON invoices.CustomerId = customers.CustomerId
     INNER JOIN employees
         ON customers.SupportRepId = employees.EmployeeId;
+
+-- #14. Which sales agent made the most dollars in sales in 2009?
+WITH TotalAgentSales AS (
+SELECT DISTINCT 
+employees.FirstName, 
+employees.LastName, 
+SUM(invoices.Total) OVER (PARTITION BY invoices.CustomerId) AS 'Total Sales'
+FROM invoices
+    INNER JOIN customers
+        ON invoices.CustomerId = customers.CustomerId
+    INNER JOIN employees
+        ON customers.SupportRepId = employees.EmployeeId
+WHERE invoices.InvoiceDate LIKE '2009%'
+)
+SELECT DISTINCT 
+TotalAgentSales.FirstName, 
+TotalAgentSales.LastName, 
+SUM(TotalAgentSales.'Total Sales') OVER (PARTITION BY TotalAgentSales.FirstName) AS 'Total Agent Sales 2009'
+FROM TotalAgentSales;
+-- Note: This answer was fairly easy to find since I already had most of the code written from the previous answer.
+-- I simply added the WHERE clause at the end of the inner query, telling it to only select information where the InvoiceDate begins with 2009,
+-- and renamed the ttotal sales column to 'Total Agent Sales 2009'.
+
