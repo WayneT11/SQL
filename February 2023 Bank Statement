@@ -1,3 +1,6 @@
+-- This is an on-going passion project where I took a bank statement from one month and manually inserted the data to create a table.
+-- I then asked and answered important questions about the data.
+
 CREATE TABLE BIT_DB.Feb2023BankStatement (
 id INTEGER PRIMARY KEY,
 'Posting Date' DATE,
@@ -117,6 +120,102 @@ INSERT INTO BIT_DB.Feb2023BankStatement VALUES (105, '2023-01-30', 'CANTEEN VEND
 INSERT INTO BIT_DB.Feb2023BankStatement VALUES (106, '2023-01-30', 'APPLECARD GSBANK PAYMENT', ' ', 124.91, 4342.35);
 INSERT INTO BIT_DB.Feb2023BankStatement VALUES (107, '2023-01-31', 'SCHWAB LQ ACH DEPOSIT', 600.00, ' ', ' ');
 INSERT INTO BIT_DB.Feb2023BankStatement VALUES (108, '2023-01-31', 'APPLE.COM BILL, 408-974-1010', ' ', 11.49, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (109, '2023-01-31', 'CVS PHARMACY #09876 SAN LEANDRO', ' ', 4.14, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (110, '2023-01-31', 'CVS PHARMACY #09876 SAN LEANDRO', ' ', 15.75, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (111, '2023-01-31', 'CSC ServiceWorks, Inc.Plainview', ' ', 10.00, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (112, '2023-01-31', 'CSC ServiceWorks, Inc.Plainview', ' ', 5.00, 4895.97);
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (113, '2023-02-02', 'Microsoft*Subscriptionmsbill.info', ' ', 10.62, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (114, '2023-02-02', 'CHIPOTLE ONLINE, CHIPOTLE.COM', ' ', 24.95, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (115, '2023-02-02', 'PINNACLE-59201BP WEB PMTS', ' ', 1948.82, 2911.58);
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (116, '2023-02-03', 'FRANCHISE TAX BD CASTTAXRFD', 762.00, ' ', ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (117, '2023-02-03', 'STARBUCKS 800-782-7282', ' ', 7.90, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (118, '2023-02-03', '76 - UNITED PACIFIC 54SAN LORENZO', ' ', 28.44, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (119, '2023-02-03', '76 - UNITED PACIFIC 54SAN LORENZO', ' ', 10.30, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (120, '2023-02-03', 'CARDMEMBER SERV WEB PYMT', ' ', 50.00, 3576.94);
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (121, '2023-02-06', 'CASH APP*CASH OUT Visa Direct US', 52.07, ' ', ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (122, '2023-02-06', 'SAFEWAY #2315, SAN LEANDRO', ' ', 24.40, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (123, '2023-02-06', 'MCDONALDS F7841, HAYWARD', ' ', 13.15, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (124, '2023-02-06', 'CHIPOTLE 1529, UNION CITY', ' ', 17.83, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (125, '2023-02-06', 'YELPINC*CHOWNOW PAPA JWWW.YELP.COM', ' ', 38.44, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (126, '2023-02-06', 'DD DOORDASH PAPAJOHNS 855-973-1040', ' ', 35.26, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (127, '2023-02-06', 'JACK IN THE BOX 0588 LATHROP', ' ', 9.66, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (128, '2023-02-06', '916PARK.COM', ' ', 7.00, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (129, '2023-02-06', 'IRON HORSE TAVERN SACRAMENTO', ' ', 25.98, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (130, '2023-02-06', 'IRON HORSE TAVERN SACRAMENTO', ' ', 34.36, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (131, '2023-02-06', 'CITYOFSAC-PRKNGPAYDISPSACRAMENTO', ' ', 4.50, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (132, '2023-02-06', 'STAGE NINE - G. WILLIKSACRAMENTO', ' ', 9.78, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (133, '2023-02-06', 'FINNEGANS PUB, SACRAMENTO', ' ', 26.25, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (134, '2023-02-06', 'PP*DUTCHBROSLL, GRANTS PASS', ' ', 11.60, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (135, '2023-02-06', 'PURCHASE ON 02/05, A ONE GAS 376 LEWELLING BLVDSAN LORENZO, CA', ' ', 40.14, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (136, '2023-02-06', 'BASKIN #361079 Q35, HAYWARD', ' ', 11.20, 3319.46);
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (137, '2023-02-07', 'UNITED FIN CAS INS PREM', ' ', 193.33, 3126.13);
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (138, '2023-02-08', 'IN N OUT BURGER 222 SAN LEANDRO', ' ', 7.53, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (139, '2023-02-08', 'SAFEWAY #2315, SAN LEANDRO', ' ', 94.82, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (140, '2023-02-08', 'DUNKIN #356174, SAN JOSE', ' ', 9.27, ' ');
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (141, '2023-02-08', 'GREAT VAPE LLC, 408-746-9971', ' ', 61.49, 2953.02);
+INSERT INTO BIT_DB.Feb2023BankStatement VALUES (142, '2023-02-09', 'CHIPOTLE ONLINE, CHIPOTLE.COM', ' ', 27.12, 2925.90);
 
+--#1. What is the total number of withdrawals? Deposits?
+SELECT COUNT("Withdrawals & Other Debits (-)") AS 'Number of Withdrawals'
+FROM BIT_DB.Feb2023BankStatement
+WHERE "Withdrawals & Other Debits (-)" <> ' ';
+
+SELECT COUNT("Deposits & Other Credits (+)") AS 'Number of Deposits'
+FROM BIT_DB.Feb2023BankStatement
+WHERE "Deposits & Other Credits (+)" <> ' ';
+
+-- Note: In answering this question, it was important for me to use the WHERE clause to filter out any rows that contained no information in the selected columns.
+--       Including those rows would produce an incorrect count.
+
+--#2. What is the total amount of withdrawals? Deposits?
+SELECT ROUND(SUM("Withdrawals & Other Debits (-)")) AS 'Sum of Withdrawals'
+FROM BIT_DB.Feb2023BankStatement;
+
+SELECT ROUND(SUM("Deposits & Other Credits (+)")) AS 'Sum of Deposits'
+FROM BIT_DB.Feb2023BankStatement;
+
+-- Note: Here, it is not neccessary to filter out blank rows of information because
+--       I'm using the SUM function, so it's only adding up the actual values and not including the blank spaces.
+--       When ran in the program, the following query proves that the blank spaces have no effect on the outcome,
+--       as the outcome is the same with or without the WHERE clause.
+
+SELECT ROUND(SUM("Withdrawals & Other Debits (-)")) AS 'Sum of Withdrawals'
+FROM BIT_DB.Feb2023BankStatement
+WHERE "Withdrawals & Other Debits (-)" <> ' ';
+
+--#3. What is the average amount withdrawn? Deposited?
+SELECT ROUND(AVG("Withdrawals & Other Debits (-)")) AS 'Avg Amount Withdrawn'
+FROM BIT_DB.Feb2023BankStatement
+WHERE "Withdrawals & Other Debits (-)" <> ' ';
+
+SELECT ROUND(AVG("Deposits & Other Credits (+)")) AS 'Avg Amount Deposited'
+FROM BIT_DB.Feb2023BankStatement
+WHERE "Deposits & Other Credits (+)" <> ' ';
+
+-- Note: Similar to question 1, it was important again that I used the WHERE clause to filter out any rows with no information.
+--       Including those rows would result in an incorrect average.
+
+--#4. What transaction has the most number of withdrawals and what is the total amount spent?
+SELECT "Transaction Description", 
+COUNT("Withdrawals & Other Debits (-)") AS "Total Withdrawals"
+FROM BIT_DB.Feb2023BankStatement
+GROUP BY "Transaction Description"
+ORDER BY "Total Withdrawals" DESC
+LIMIT 1;
+
+SELECT "Transaction Description", 
+SUM("Withdrawals & Other Debits (-)") AS "Total Spent"
+FROM BIT_DB.Feb2023BankStatement
+WHERE "Transaction Description" LIKE '365 Market%';
+
+--#5. What are the top 5 transactions with the most amount spent?
+SELECT 
+"Transaction Description", 
+ROUND(SUM("Withdrawals & Other Debits (-)")) AS 'Total Spent'
+FROM BIT_DB.Feb2023BankStatement
+GROUP BY "Transaction Description"
+ORDER BY "Total Spent" DESC
+LIMIT 5;
+-- Note to self: make sure it's adding up total amount spent for each transaction with the same name
 
 
